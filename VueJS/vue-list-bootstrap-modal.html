@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+    <style>
+        .row * {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="aaaaaaaaaa" class="container">
+        <div class="row">
+            <div class="col-xs-6 col-xs-push-3">
+                <h1>Uma lista de coisas</h1>
+                <template v-if="coisas.length==0">
+                    <h4>Não tem coisa nenhuma!</h4>
+                </template>
+                <template v-else>
+                    <ul>
+                        <li v-for="coisa in coisas">{{coisa}}</li>
+                    </ul>
+                </template>
+                <button class="btn btn-warning btn-block btn-lg" data-toggle="modal" data-target="#myModal">Adicionar uma coisa na lista</button>
+            </div>
+        </div>
+
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal da coisa</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="nome">Nome da coisa:</label>
+                                <input v-model="coisa" class="form-control">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button v-on:click="addCoisaEmCoisas" type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: '#aaaaaaaaaa',
+            data: {
+                coisas: [],
+                coisa: "",
+            },
+            methods: {
+                addCoisaEmCoisas: function () {
+                    console.log("opa");
+                    if (this.coisa.length > 0) {
+                        this.coisas.push(this.coisa);
+                        this.coisa = "";
+                    }
+                }
+            }
+        })
+    </script>
+</body>

@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'pn-light';
+    src: url('../fonts/pn-light.woff2') format('woff2'),
+         url('../fonts/pn-light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pn-bold';
+    src: url('../fonts/pn-bold.woff2') format('woff2'),
+         url('../fonts/pn-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pn';
+    src: url('../fonts/pn-regular.woff2') format('woff2'),
+         url('../fonts/pn-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
