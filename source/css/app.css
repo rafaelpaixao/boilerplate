@@ -1,0 +1,8 @@
+#appVue {
+  max-width: 900px;
+  margin: 0 auto; }
+  #appVue h1 {
+    margin-top: 30px;
+    margin-bottom: 50px; }
+  #appVue .icon-margin {
+    margin-right: 7px; }

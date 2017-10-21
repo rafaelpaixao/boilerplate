@@ -1,0 +1,32 @@
+.page-report {
+    .dropdown{
+        button{
+            font-size: 20px;
+            i{
+                margin-left: 10px;
+            }
+        }
+        .dropdown-menu{
+            left: initial;
+            right: 0;
+            margin-top: 10px;
+        }
+    }
+    form {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        max-width: 500px;
+    }
+    .table-responsive{
+        margin-top: 25px;
+        margin-bottom: 25px;
+        h4{
+            margin-bottom: 0px;
+        }
+        td{
+            a{
+                cursor: pointer!important;
+            }
+        }
+    }
+}
